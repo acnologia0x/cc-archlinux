@@ -1,0 +1,26 @@
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "soft"
+pure_black_dark = false
+
+[theme.templates]
+enable_community_templates = true
+builtin_ids = [ 
+        "alacritty", 
+        "btop", 
+        "cava", 
+        "gtk3", 
+        "gtk4", 
+        "helix", 
+        "kcolorscheme", 
+        "kitty", 
+        "niri", 
+        "qt" 
+        ]
+community_ids = [
+    "zen-browser", 
+    "neovim",  
+    "fuzzel", 
+    "fastfetch", 
+    "papirus-icons" ]

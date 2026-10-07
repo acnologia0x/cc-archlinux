@@ -1,0 +1,50 @@
+[bar]
+order = ["main"] # layer-shell creation order
+[bar.main]
+enabled= true
+thickness = 35
+position= "top"  # top | bottom | left | right
+color = "primary" #primary \ on_primary \ secondary \ on_secondary \ tertiary \ on_tertiary \ error \ on_error \ surface \ on_surface \ surface_variant \ on_surface_variant \ outline \ shadow \ hover \ on_hover \ custom \
+concave_edge_corners = false      # carve the screen-edge corners inward; requires margin_edge = 0       = 19         
+background_opacity = 0.0       # 0.0 (transparent) to 1.0 (opaque)   # color role or #RRGGBB for the bar outline 
+reserve_space = true       # reserve compositor exclusive zone / push windows away
+radius = 5         # global corner radius fallback (Can also add radius_top_left, radius_top_right, radius_bottom_left, radius_bottom_right individually)
+padding = 19
+scale = 0.9
+margin_edge = 9     # distance from the nearest screen edge (positive values float the bar)
+margin_ends = 9      # inset from each end of the bar along its main axis
+margin_opposite_edge = 0        # extra reserved space on the inward side of the bar (below for top, above for bottom)           
+layer= "top"      # top | overlay; overlay appears above fullscreen apps
+border = "primary"
+border_width = 0.0
+capsule            = true
+capsule_thickness  = 1 # capsule size across the bar as a fraction of bar thickness (1.0 fills the bar)
+capsule_border = "primary"  #primary \ on_primary \ secondary \ on_secondary \ tertiary \ on_tertiary \ error \ on_error \ surface \ on_surface \ surface_variant \ on_surface_variant \ outline \ shadow \ hover \ on_hover \ custom \
+capsule_fill = "on_primary"
+capsule_foreground = "primary"
+capsule_opacity = 0.0
+capsule_padding = 11.0
+capsule_radius = 5
+icon_color = "primary"
+smart_auto_hide    = false       # show when the active workspace is empty; hide when it has windows
+auto_hide          = false       # slide out after pointer leaves; reveal from edge trigger strip
+show_on_workspace_switch = false  # with auto_hide: briefly reveal when the active workspace changes
+shadow             = true        # cast the global [shell.shadow]
+contact_shadow     = false       # dark gradient between an attached panel and the bar (depth at the seam)
+panel_overlap      = 0           # logical px an attached panel overlaps the bar edge to hide the seam
+widget_spacing = 10
+hover_highlight    = true        # softly tint the widget under the mouse pointer with its foreground color       
+font_weight        = 500         # CSS weight 100–1000 (e.g. 400 regular, 700 bold); primary label weight for bar widgets
+font_family        = ""          # typeface for this bar's widgets; empty inherits the global font
+start  = ["workspaces" ]
+center = ["media",]
+end    = ["tray", "notifications", "clipboard","network","volume","battery","clock","wallpaper","session"]
+[widget.media]
+anchor = false
+art_size = 17
+artist_first = true
+max_length = 500
+min_length = 119
+title_scroll = "always"
+[widget.workspaces]
+display = "none" #none \ number \ ...

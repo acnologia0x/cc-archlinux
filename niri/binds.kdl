@@ -1,0 +1,60 @@
+binds {
+    // =========>ONES THAT ACTUALLY WORKS
+    F11 hotkey-overlay-title="Fullscreen" { fullscreen-window; }
+    Super+Down hotkey-overlay-title="Focus Workspace Down" { focus-workspace-down; }
+    Super+J hotkey-overlay-title="Focus Workspace Up" { focus-workspace-down; }
+    Super+WheelScrollDown hotkey-overlay-title="Focus Workspace Down" { focus-workspace-down; }
+    Super+Up hotkey-overlay-title="Focus Workspace Up" { focus-workspace-up; }
+    Super+K hotkey-overlay-title="Focus Workspace Up" { focus-workspace-up; }
+    Super+WheelScrollUp hotkey-overlay-title="Focus Workspace Up" { focus-workspace-up; }
+    Super+Shift+Down hotkey-overlay-title="Move to Workspace Down" { move-column-to-workspace-down; }
+    Super+Shift+J hotkey-overlay-title="Move to Workspace Down" { move-column-to-workspace-down; }
+    Super+Shift+WheelScrollDown hotkey-overlay-title="Move to Workspace Down" { move-column-to-workspace-down; }
+    Super+Shift+Up hotkey-overlay-title="Move to Workspace Up" { move-column-to-workspace-up; }
+    Super+Shift+K hotkey-overlay-title="Move to Workspace Up" { move-column-to-workspace-up; }
+    Super+Shift+WheelScrollUp hotkey-overlay-title="Move to Workspace Up" { move-column-to-workspace-up; }
+    Mod+X hotkey-overlay-title="Cycle Window Height" { switch-preset-window-height; }
+    Mod+R hotkey-overlay-title="Switch Floating/Tiling Focus" { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+X hotkey-overlay-title="Reset Window Height" { reset-window-height; }
+    Super+Ctrl+Left hotkey-overlay-title="Consume/Expel Left" { consume-or-expel-window-left; }
+    Super+Ctrl+Right hotkey-overlay-title="Consume/Expel Right" { consume-or-expel-window-right; }
+    Super+F hotkey-overlay-title="Toggle Floating" { toggle-window-floating; }
+    Super+Left hotkey-overlay-title="Focus Left" { focus-column-left; }
+    Super+H hotkey-overlay-title="Focus Left" { focus-column-left; }
+    Super+Q hotkey-overlay-title="Close Window" { close-window; }
+    Super+Right hotkey-overlay-title="Focus Right" { focus-column-right; }
+    Super+L hotkey-overlay-title="Focus Right" { focus-column-right; }
+    Super+Shift+Left hotkey-overlay-title="Move Left" { move-column-left; }
+    Super+Shift+H hotkey-overlay-title="Move Left" { move-column-left; }
+    Super+Shift+Right hotkey-overlay-title="Move Right" { move-column-right; }
+    Super+Shift+L hotkey-overlay-title="Move Right" { move-column-right; }
+    Super+Shift+W hotkey-overlay-title="Expand to Available Width" { expand-column-to-available-width; }
+    Super+W hotkey-overlay-title="Cycle Column Width" { switch-preset-column-width; }
+    Super+WheelScrollLeft hotkey-overlay-title="Focus Left" { focus-column-left; }
+    Super+WheelScrollRight hotkey-overlay-title="Focus Right" { focus-column-right; }
+    Super+Shift+S hotkey-overlay-title="Screenshot (Interactive)" { screenshot; }
+    Super+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Super+Tab hotkey-overlay-title="Toggle Overview" { toggle-overview; }
+    Super+Shift+B { spawn "helium-browser"; }
+    Super+B {spawn "zen-browser";}
+    Super+N { spawn "notesnook"; }
+    Super+P { spawn "protonvpn-app"; }
+    Super+Shift+E { spawn "nautilus"; }            
+    Super+E { spawn-sh "fuzzel"; }
+    Super+M {spawn "tauonmb";}
+//ONES THAT ACTUALLY WORKS<=========
+// =========>NOCATLIA SHELL KEYBINDS
+    // Core Noctalia binds
+    Alt+F4 {spawn-sh "noctalia msg panel-toggle session";} 
+    Mod+Space { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+S { spawn-sh "noctalia msg settings-toggle"; }
+    // Niri has a built-in window switcher you might want to try it to see which one you prefer.
+    // Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+    // Audio & Brightness
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+// <=========NOCATLIA SHELL KEYBINDS
+}

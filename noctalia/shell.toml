@@ -1,0 +1,76 @@
+[shell]
+#avatar_path` controls the avatar Noctalia shows in shell UI such as the Control Center Home tab. 
+lang                = "en"
+avatar_path         = "/home/cc/Pictures/Icons/Lelouch_Retro.jpeg"
+corner_radius_scale   = 0.5          # 0 = square, 1 = default, 2 = extra rounded
+font_family = "Noto Kufi Arabic Medium"
+time_format           = "{:%H:%M}"  # default shell UI time format
+date_format           = "%A, %x"    # default shell UI date format
+button_borders        = true            # draw outlines around buttons throughout the shell
+input_borders         = true            # draw outlines around text fields and other inputs
+popup_borders         = true            # draw outlines around popups and dropdowns
+popup_shadows         = false            # draw drop shadows behind popups and dropdowns
+floating_offset          = 8           # px gap between a floating/detached panel and the bar edge
+settings_show_advanced = true      # show advanced settings by default in Settings
+show_location         = true         # hide weather location text in shell UI when false
+screen_time_enabled   = false           # track per-app usage time for the Control Center screen-time view
+middle_click_opens_widget_settings = true # middle-click bar widgets to open their Settings entry
+clipboard_enabled     = true
+clipboard_history_max_entries = 100 # unpinned history cap (10–10000); pinned entries are extra
+clipboard_auto_paste  = "auto"       # off | auto | ctrl_v | ctrl_shift_v | shift_insert
+clipboard_image_action_command = ""  # image preview action: gimp {path}, or satty -f - via stdin
+clipboard_confirm_clear_history = true  # confirm before clear history / delete unpinned entries
+list_item_background  = true  # filled rounded background behind launcher and clipboard list items
+panel_anchor_bar   = "main"        # bar panels attach to without a source bar; omit = first enabled bar
+[accessibility]
+ui_scale              = 1.0
+high_contrast         = false
+[shell.animation]
+enabled = true
+speed   = 0.5                       # 0.5 = 2× slower, 2.0 = 2× faster
+[shell.shadow]
+direction = "center"                  # center, up, down, left, right, up_left, up_right, down_left, down_right
+alpha     = 0.55                    # multiplied by each component's background opacity
+[shell.panel]
+transparency_mode     = "glass"     # solid | soft | glass; controls floating/centered opacity and card translucency
+borders = "on_primary" # panel shell outline and in-panel section cards
+shadow                = true        # cast the global [shell.shadow] from panel surfaces
+launcher_placement       = "floating" # attached | floating | centered
+clipboard_placement      = "floating" # attached | floating | centered
+control_center_placement = "floating" # attached | floating | centered
+wallpaper_placement      = "floating" # attached | floating | centered
+session_placement        = "floating" # attached | floating | centered
+open_near_click_control_center = true # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_launcher       = true # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_clipboard      = true # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_wallpaper      = true # for attached/floating placement, follow the bar click instead of bar-center
+open_near_click_session        = true # for attached/floating placement, follow the bar click instead of bar-center
+[shell.launcher]
+categories    = false                    # show category filters in the launcher
+show_icons    = true                    # show application icons in launcher results
+compact       = true                   # use smaller icons and tighter result rows
+app_grid      = false                   # show app icon grid view when results are apps only
+sort_by_usage = true                    # sort apps by usage frequency
+fetch_exchange_rates = true             # refresh currency rates from third-party sources
+provider_prefix = "/"                     # common prefix character for provider trigger words (e.g. "/" or ".")
+auto_paste = "auto"                       # off | auto | ctrl_v | ctrl_shift_v | shift_insert (copy activations)
+[shell.screen_corners]
+enabled = false   # overlay black rounded corners on each screen
+size    = 9      # corner radius in logical pixels (1–100)
+[hot_corners]
+enabled = false    # trigger actions by pushing the mouse pointer into screen corners
+delay_ms = 0       # hold time before triggering (0 = immediate; raise to avoid accidental hits)
+# Configure each corner independently. Available actions:
+# none | launcher | window-switcher | control-center | command
+[hot_corners.top_left]
+action = "window-switcher "
+[hot_corners.bottom_right]
+action = "control-center"
+[shell.screenshot]
+show_cursor       = false                       # include the mouse pointer in captures
+freeze_screen     = false                       # freeze the desktop before region selection
+copy_to_clipboard = false                       # also place the PNG on the clipboard
+confirm_region    = false                       # confirm region captures with Enter or Space
+save_to_file      = true                       # write captures as PNG to the output directory
+directory         = "/home/acnologia/Pictures/Screenshots"
+filename_pattern  = "screenshot_%Y%m%d_%H%M%S"  # strftime pattern, no extension (.png is added)

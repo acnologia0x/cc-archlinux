@@ -1,0 +1,40 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "file",
+        "source": "/home/lelouch/Documents/Lelouch.txt",
+        "color": {},
+        "padding": {
+            "top": 2,
+            "right": 4
+        }
+    },
+	"display": {
+		"percent": { "type": 9 }, // colored percent number
+		"separator": "  ",
+		"color": {
+			"keys": "#7dcfff"
+		}
+	},
+	"modules": [
+		{
+			"type": "title",
+			"color": {
+				"at": "#ffffff",
+				"host": "#7dcfff",
+				"user": "#89b4fa"
+			}
+		},
+		{ "type": "separator", "string": "─" },
+		{ "type": "os", "key": "OS" },
+		{ "type": "kernel", "key": "kernel" },
+		{ "type": "shell", "key": "" },
+		{ "type": "wm", "key": "" },
+		{ "type": "terminal", "key": "" },
+		{ "type": "packages", "key": "󰏓" },
+		{ "type": "memory", "key": "󰍛" },
+		"break",
+	]
+}
+
+//"1": "#7dcfff"

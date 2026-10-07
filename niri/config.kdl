@@ -1,0 +1,159 @@
+input{
+	touchpad{
+		tap
+		natural-scroll
+	}
+}
+
+config-notification {
+    disable-failed
+}
+layout{
+    // Set gaps around windows in logical pixels.
+    gaps 12.5
+    // When to center a column when changing focus, options are:
+    // - "never", default behavior, focusing an off-screen column will keep at the left
+    //   or right edge of the screen.
+    // - "always", the focused column will always be centered.
+    // - "on-overflow", focusing a column will center it if it doesn't fit
+    //   together with the previously focused column.
+    center-focused-column "never"
+    preset-column-widths{
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    default-column-width { proportion 0.5; }
+    border{
+        off
+        width 1.5
+        active-color   "#707070"      // Neutral gray
+        inactive-color "#d0d0d0"      // Light gray
+        urgent-color   "#cc4444"      // Softer red
+    }
+
+    focus-ring{
+        width 2
+    }
+
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+}
+//=====>> Noctalia Specific layer-rule & window-rule
+layer-rule{
+//This configuration places Noctalia’s dedicated backdrop layer (a blurred and tinted copy of the wallpaper) within Niri’s overview backdrop.
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+layer-rule{
+//Background effects for Nocatalia Bar...
+    match namespace="^noctalia-bar"
+    background-effect{
+        blur false
+    }
+}
+window-rule{
+// Floating Noctalia settings window.
+    match app-id="dev.noctalia.Noctalia"
+    open-floating false
+}
+//<<===== Noctalia Specific layer-rule & window-rule
+overview {
+    workspace-shadow {
+        off
+    }
+}
+// Add lines like this to spawn processes at startup.
+spawn-at-startup "noctalia"
+spawn-at-startup "easyeffects"
+spawn-at-startup "xwayland-satellite"
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+
+//=========>>COMMON WINDOWS RULES
+window-rule{
+    geometry-corner-radius 4.9
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+}
+//<<=========COMMON WINDOWS RULES
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+window-rule{
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+}
+window-rule{
+    match app-id=r#"^gnome-control-center$"#
+    match app-id=r#"^pavucontrol$"#
+    match app-id=r#"^nm-connection-editor$"#
+    default-column-width { proportion 0.5; }
+    open-floating false
+}
+window-rule{
+    match app-id=r#"^org\.gnome\.Calculator$"#
+    match app-id=r#"^gnome-calculator$"#
+    match app-id=r#"^galculator$"#
+    match app-id=r#"^blueman-manager$"#
+    match app-id=r#"^xdg-desktop-portal$"#
+    open-floating true
+}
+window-rule{
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+window-rule{
+    match app-id="org.gnome.Nautilus"
+    draw-border-with-background false
+}
+
+window-rule{
+    match app-id="kitty"
+    draw-border-with-background false
+    background-effect{
+	    blur false
+	}
+}
+
+window-rule{
+    match app-id="tauonmb"
+    draw-border-with-background false
+    background-effect{
+    blur false
+    }
+}
+
+debug{
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
+recent-windows{
+    binds{
+        Alt+Tab     { next-window scope="output"; }
+        Alt+Shift+Tab   { previous-window scope="output"; }
+        Alt+grave       { next-window filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+//Include noctalia files
+include "noctalia.kdl" //The Color pallete that noctalia automanically changes acording to the wallpaper.
+//Include my files
+include "binds.kdl"
+// ====================================================================================================================================================================
+//=====>>DUMP
+//<<=====DUMP
