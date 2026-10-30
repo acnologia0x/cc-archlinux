@@ -41,8 +41,9 @@ binds {
     Super+P { spawn "protonvpn-app"; }
     Super+Shift+E { spawn "nautilus"; }            
     Super+E { spawn-sh "fuzzel"; }
-    Super+M {spawn "tauonmb";}
     Super+V {spawn "code";}
+    Super+M {spawn-sh "rmpc";}
+    // Super+M {spawn "tauonmb";}
 //ONES THAT ACTUALLY WORKS<=========
 // =========>NOCATLIA SHELL KEYBINDS
     // Core Noctalia binds
