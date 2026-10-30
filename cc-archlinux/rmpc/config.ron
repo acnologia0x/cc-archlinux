@@ -71,11 +71,11 @@
             "gT":         PreviousTab,
             "1":          SwitchToTab("Queue"),
             "2":          SwitchToTab("Directories"),
-            "3":          SwitchToTab("Artists"),
-            "4":          SwitchToTab("Album Artists"),
-            "5":          SwitchToTab("Albums"),
-            "6":          SwitchToTab("Playlists"),
-            "7":          SwitchToTab("Search"),
+            "3":          SwitchToTab("Search"),
+            "4":          SwitchToTab("Albums"),
+            "5":          SwitchToTab("Album Artists"),
+            "6":          SwitchToTab("Artists"),
+            "7":          SwitchToTab("Playlists"),
             "<C-u>":      Update,
             "<C-U>":      Rescan,
             "R":          AddRandom,
@@ -240,23 +240,13 @@
             )
         ),
         (
-            name: "Artists",
+            name: "Search",
             borders: "ALL",
             border_symbols: Rounded,
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Artists), size: "100%", borders: "ALL", border_symbols: Rounded)],
-            )
-        ),
-        (
-            name: "Album Artists",
-            borders: "ALL",
-            border_symbols: Rounded,
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(AlbumArtists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
             )
         ),
         (
@@ -270,6 +260,26 @@
             )
         ),
         (
+            name: "Album Artists",
+            borders: "ALL",
+            border_symbols: Rounded,
+            pane: Split(
+                size: "100%",
+                direction: Vertical,
+                panes: [(pane: Pane(AlbumArtists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+            )
+        ),
+        (
+            name: "Artists",
+            borders: "ALL",
+            border_symbols: Rounded,
+            pane: Split(
+                size: "100%",
+                direction: Vertical,
+                panes: [(pane: Pane(Artists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+            )
+        ),
+        (
             name: "Playlists",
             borders: "ALL",
             border_symbols: Rounded,
@@ -277,16 +287,6 @@
                 size: "100%",
                 direction: Vertical,
                 panes: [(pane: Pane(Playlists), size: "100%", borders: "ALL", border_symbols: Rounded)],
-            )
-        ),
-        (
-            name: "Search",
-            borders: "ALL",
-            border_symbols: Rounded,
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
             )
         ),
     ],
