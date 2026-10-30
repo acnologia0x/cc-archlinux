@@ -102,6 +102,7 @@ window-rule{
 spawn-at-startup "noctalia"
 spawn-at-startup "easyeffects"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "mpd"
 //=========>>COMMON WINDOWS RULES
 prefer-no-csd
 window-rule{

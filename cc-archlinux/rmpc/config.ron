@@ -43,9 +43,9 @@
             "oP":         Partition(),
             "z":          ToggleRepeat,
             "x":          ToggleRandom,
-            "c":          ToggleConsume,`
+            "c":          ToggleConsume,
             "v":          ToggleSingle,
-            "`":          TogglePause,
+            "p":          TogglePause,
             "s":          Stop,
             ">":          NextTrack,
             "<":          PreviousTrack,
@@ -149,29 +149,29 @@
                 direction: Horizontal,
                 panes: [
                     (
-                        size: "25%",
+                        size: "65%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | TOP | BOTTOM",
+                                    borders: "LEFT | RIGHT | TOP",
                                     border_symbols: Rounded,
                                     pane: Pane(AlbumArt)
                                 ),
-                                // (
-                                //     size: "20",
-                                //     borders: "ALL",
-                                //     // border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
-                                //     border_title: [(kind: Text(" Lyrics "))],
-                                //     border_title_alignment: Right,
-                                //     pane: Pane(Lyrics)
-                                // ),
+                                (
+                                    size: "7",
+                                    borders: "ALL",
+                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
+                                    border_title: [(kind: Text(" Lyrics "))],
+                                    border_title_alignment: Right,
+                                    pane: Pane(Lyrics)
+                                ),
                             ],
                         ),
                     ), 
                     (
-                        size: "75%",
+                        size: "35%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
