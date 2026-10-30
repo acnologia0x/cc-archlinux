@@ -14,7 +14,7 @@
     enable_mouse: true,
     scroll_amount: 1,
     enable_config_hot_reload: true,
-    enable_lyrics_hot_reload: false,
+    enable_lyrics_hot_reload: true,
     status_update_interval_ms: 1000,
     rewind_to_start_sec: None,
     keep_state_on_song_change: true,
@@ -24,6 +24,18 @@
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
     auto_open_downloads: true,
+    cava: (
+        framerate: 60,
+        autosens: true,
+        sensitivity: 130,
+        input: (
+            method: Fifo,
+            source: "/tmp/mpd.fifo",
+            sample_rate: 44100,
+            channels: 2,
+            sample_bits: 16,
+        )
+    ),
     album_art: (
         method: Auto,
         max_size_px: (width: 1200, height: 1200),
@@ -149,29 +161,29 @@
                 direction: Horizontal,
                 panes: [
                     (
-                        size: "65%",
+                        size: "25%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | TOP",
+                                    borders: "LEFT | RIGHT | TOP | BOTTOM",
                                     border_symbols: Rounded,
                                     pane: Pane(AlbumArt)
                                 ),
                                 (
-                                    size: "7",
+                                    size: "15",
                                     borders: "ALL",
-                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
-                                    border_title: [(kind: Text(" Lyrics "))],
+                                    // border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
+                                    border_title: [(kind: Text(" Cava "))],
                                     border_title_alignment: Right,
-                                    pane: Pane(Lyrics)
+                                    pane: Pane(Cava)
                                 ),
                             ],
                         ),
                     ), 
                     (
-                        size: "35%",
+                        size: "75%",
                         pane: Split(
                             direction: Vertical,
                             panes: [

@@ -15,7 +15,7 @@
     preview_metadata_group_style: (fg: "#81a1c1"),
     song_table_album_separator: None,
     tab_bar: (
-        active_style: (fg: "#080c10", bg: "#81a1c1", modifiers: "Bold"),
+        active_style: (fg: "rgb(8, 12, 16)", bg: "#81a1c1", modifiers: "Bold"),
         inactive_style: (fg: "#4c566a", bg: "#080c10"),
     ),
     highlighted_item_style: (fg: "#a3be8c", modifiers: "Bold"),
